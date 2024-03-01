@@ -41,7 +41,7 @@ public class OrderedDictionary implements OrderedDictionaryADT {
 	}
 
 	String currentName = node.getData().getDataKey().getWhaleName();
-	if (currentName.contains(partialName.toLowerCase())) {
+	if (currentName.contains(partialKey.toLowerCase())) {
 		return node.getData(); // Found a match
 	}
 
