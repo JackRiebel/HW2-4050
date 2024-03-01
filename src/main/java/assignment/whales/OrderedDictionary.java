@@ -18,33 +18,43 @@ public class OrderedDictionary implements OrderedDictionaryADT {
      */
     @Override
     public WhaleRecord find(DataKey k) throws DictionaryException {
-        Node current = root;
-        int comparison;
-        if (root.isEmpty()) {         
-            throw new DictionaryException("There is no record matches the given key");
-        }
+	// Start from root of the tree
+	Node current = root;
 
-        while (true) {
-            comparison = current.getData().getDataKey().compareTo(k);
-            if (comparison == 0) { // key found
-                return current.getData();
-            }
-            if (comparison == 1) {
-                if (current.getLeftChild() == null) {
-                    // Key not found
-                    throw new DictionaryException("There is no record matches the given key");
-                }
-                current = current.getLeftChild();
-            } else if (comparison == -1) {
-                if (current.getRightChild() == null) {
-                    // Key not found
-                    throw new DictionaryException("There is no record matches the given key");
-                }
-                current = current.getRightChild();
-            }
-        }
+	// Check if the tree is empty
+	if (root.isEmpty()) {
+		throw new DictionaryException("There is no record that matches the given key");
+	}
 
+	// Use a helper method to search for partial key matches
+	WhaleRecord match = findPartialKey(current, k.getWhaleName());
+	if (match != null) {
+		return match;
+	} else {
+	    throw new DictionaryException("There is no record that matches the given key");
+	}
     }
+    // Helper search method
+    private WhaleRecord findPartialKey(Node node, String partialKey) {
+	if (node == null || node.isEmpty()) {
+		return null; // Empty node means no match was found
+	}
+
+	String currentName = node.getData().getDataKey().getWhaleName();
+	if (currentName.contains(partialName.toLowerCase())) {
+		return node.getData(); // Found a match
+	}
+
+	// Search left subtree
+	WhaleRecord leftMatch = findPartialKey(node.getLeftChild(), partialKey);
+	if (leftMatch != null) {
+		return leftMatch; // Match found in left subtree
+	}
+
+	// If match wasn't found in lest subtree, search right subtree
+	return findPartialKey(node.getRightChild(), partialKey);
+    }
+	
 
     /**
      * Inserts r into the ordered dictionary. It throws a DictionaryException if
