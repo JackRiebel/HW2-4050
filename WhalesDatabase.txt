@@ -1,25 +1,25 @@
-1
+3
 Blue Whale
 The largest mammal on Earth, reaching lengths of up to 100 feet. Known for its massive body, blue-gray coloration, and a broad, flat head. Primarily feeds on krill. Notable for its deep, resonant calls that can be heard over great distances in the ocean. Low-frequency sound; played at 8x normal speed.
-1
+3
 Fin Whale
 Second-largest whale species, growing up to 85 feet. Sleek, streamlined body with a distinctive V-shaped head. The asymmetrical coloration of the jaw is a unique feature, with the right lower jaw being white. Known for their speed and agility in the water. Low-frequency sound; played at 5x normal speed.
-1
+3
 Humpback Whale
 Up to 60 feet long, known for its acrobatic breaches and long, complex songs. Distinctive for its long pectoral fins and knobbly head. Exhibits unique feeding behavior known as bubble-net feeding. Black or dark gray with a white underbelly. Variety of call types in songs.
-1
+2
 Minke Whale
 The smallest of the baleen whales, reaching up to 20 feet. Characterized by a pointed snout, a sleek body, and a dorsal fin set far back on the body. Dark gray on top with a white underside. Known for being elusive and fast swimmers. Pulse train vocalizations.
-1
+2
 North Atlantic Right Whale
 Reaches up to 55 feet in length, known for its bulky body and lack of a dorsal fin. Easily identifiable by callosities on its head, used for individual identification. Critically endangered, with a high susceptibility to ship strikes and entanglement in fishing gear. Upcalls, moans, and gunshots.
-1
+3
 Sei Whale
 Grows up to 65 feet, slender and streamlined, with a dark gray color. Rarely breaches but is known for its fast swimming speeds. Feeds by skimming the water for plankton and small fish. Downsweeps in a doublet and singlet pattern, low-frequency.
-2
+1
 Atlantic Spotted Dolphin
 Reaches lengths of up to 7.5 feet. Exhibits a spotted coloration pattern that increases with age. Known for their acrobatics and playfulness. Often found in pods and interacts with other dolphin species. Variety of whistles.
-2
+1
 Atlantic White-sided Dolphin
 Grows to about 8 feet, with a robust body and a distinct coloration pattern of dark gray, white, and yellowish-tan patches on the sides. Known for its energetic behavior, including leaps and belly flops. Variety of whistles.
 2
@@ -31,16 +31,16 @@ Commonly recognized species, growing up to 12 feet. Sleek, gray body with a dist
 2
 Cuvier’s Beaked Whale
 A deep-diving species reaching lengths up to 23 feet. Dark gray body with a lighter gray head, sometimes scarred due to squid suction marks. Known for holding the record for the deepest and longest dive among mammals. Clicks.
-2
+1
 Harbor Porpoise
 One of the smallest marine mammals, reaching about 6 feet in length. Dark gray back and white underbelly. Shy and elusive, often seen in coastal waters and estuaries. High-frequency clicks, played at 0.01x normal speed.
-2
+1
 Humpback Dolphin
 Grows up to 8 feet, with a hump ahead of the dorsal fin. Coloration varies from gray to pinkish. Found in coastal waters and estuaries in the tropics. Social and often seen in groups. Clicks and whistles.
-3
+2
 Killer Whale
 Also known as the orca, can grow up to 32 feet. Distinctive black and white patterning with a tall, prominent dorsal fin. Top predator in the marine ecosystem, known for their complex social structures and vocal behaviors. Clicks and whistles.
-3
+2
 Northern Bottlenose Whale
 Grows up to 30 feet, with a large bulbous forehead and a beak-like snout. Dark gray body. Prefers deep waters of the North Atlantic and is known for its curiosity towards boats. Clicks.
 
