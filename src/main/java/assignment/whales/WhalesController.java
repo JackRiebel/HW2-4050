@@ -153,20 +153,42 @@ public class WhalesController implements Initializable {
         }
     }
 
-    public void first() {
-        // Write this method
+    public void first() throws DictionaryException{
+        whale = database.smallest();
+        showWhale();
     }
 
-    public void last() {
-        // Write this method
+    public void last() throws DictionaryException {
+        whale = database.largest();
+        showWhale();
     }
 
-    public void next() {
-        // Write this method;
+    public void next() throws DictionaryException {
+        if(whale == null){
+            throw new DictionaryException("Error");
+        }
+        DataKey myKey = whale.getDataKey();
+        if(database.successor(myKey) == null){
+            displayAlert("Error: Reached end of dictionary.");
+        }
+        else{
+            whale = database.successor(myKey);
+            showWhale();
+        }
     }
 
-    public void previous() {
-            // Write this method
+    public void previous() throws DictionaryException {
+        if(whale == null){
+            throw new DictionaryException("Error");
+        }
+        DataKey myKey = whale.getDataKey();
+        if(database.predecessor(myKey) == null){
+            displayAlert("Error: Reached edge of dictionary.");
+        }
+        else{
+            whale = database.predecessor(myKey);
+            showWhale();
+        }
     }
 
     public void play() {
@@ -206,7 +228,6 @@ public class WhalesController implements Initializable {
                         break;
                     default:
                         description = data;
-                        System.out.println("MADE IT HERE");
                         database.insert(new WhaleRecord(new DataKey(whaleName, size), description, whaleName + ".mp3", whaleName + ".jpeg"));
                         break;
                 }
@@ -219,7 +240,11 @@ public class WhalesController implements Initializable {
             Logger.getLogger(WhalesController.class.getName()).log(Level.SEVERE, null, ex);
         }
         this.WhalePortal.setVisible(true);
-        this.first();
+        try{
+            this.first();
+        } catch (DictionaryException ex){
+            System.out.println("Dictionary failed to display.");
+        }
     }
 
     @Override
